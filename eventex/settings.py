@@ -12,7 +12,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = { 
-    'default': dj_database_url(
+    'default': dj_database_url.config(
 	default='sqlite:///' + PROJECT_DIR.child('database.db')
     )
 }
