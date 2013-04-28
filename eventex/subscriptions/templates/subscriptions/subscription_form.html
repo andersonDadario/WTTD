@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EventeX - Subscription Form</title>
+	</head>
+	<body>
+		<form action="." method="POST">
+			{% csrf_token %}
+			<p>
+				<label for="id_name">Nome:</label>
+				<input id="id_name" type="text" name="name" maxlength="100" />
+			</p>
+                        <p>
+                                <label for="id_cpf">CPF:</label>
+                                <input id="id_cpf" type="text" name="name" maxlength="11" />
+                        </p>
+                        <p>
+                                <label for="id_email">Email:</label>
+                                <input id="id_email" type="text" name="name" maxlength="75" />
+                        </p>
+                        <p>
+                                <label for="id_telefone">Telefone:</label>
+                                <input id="id_telefone" type="text" name="name" maxlength="20" />
+                        </p>
+			<input type="submit" value="Enviar" />
+		</form>
+	</body>
+</html>

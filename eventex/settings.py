@@ -4,7 +4,7 @@ import dj_database_url
 from unipath import Path
 PROJECT_DIR = Path(__file__).parent
 
-DEBUG = os.environ.get('DEBUG')==True
+DEBUG = os.environ.get('DEBUG')=='True'
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -135,6 +135,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'eventex.core',
+    'eventex.subscriptions',
 )
 
 # A sample logging configuration. The only tangible logging
