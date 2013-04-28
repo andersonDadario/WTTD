@@ -1,4 +1,4 @@
-# coding: utf8
+# coding: utf-8
 from django.test import TestCase
 from eventex.subscriptions.forms import SubscriptionForm
 
@@ -23,12 +23,13 @@ class SubscribeTest(TestCase):
 		form = self.resp.context['form']
 		self.assertIsInstance(form, SubscriptionForm)
 
-
 	#
 	## Testes de Apoio
+	'''
 	def test_html(self):
 		'Subscription form must contain input controls'
 		self.assertContains(self.resp, '<form', 1)
 		self.assertContains(self.resp, '<input', 6)
 		self.assertContains(self.resp, 'type="text"', 4)
 		self.assertContains(self.resp, 'type="submit"', 1)
+	'''
