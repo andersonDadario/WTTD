@@ -18,6 +18,7 @@ def subscribe(request):
 '''
 
 #v3
+'''
 from django.shortcuts import render
 from eventex.subscriptions.forms import SubscriptionForm
 def subscribe(request):
@@ -25,4 +26,23 @@ def subscribe(request):
 		'subscriptions/subscription_form.html', 
                 {'form': SubscriptionForm()}
 	)
+'''
+
+#v4
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from eventex.subscriptions.forms import SubscriptionForm
+from eventex.subscriptions.models import Subscription
+def subscribe(request):
+	if request.method == "POST":
+		form = SubscriptionForm(request.POST)
+		form.is_valid()
+		obj = Subscription(**form.cleaned_data)
+		obj.save()
+		return HttpResponseRedirect("/inscricao/%d/" % 1)
+	else:
+        	return render(request,
+                	'subscriptions/subscription_form.html',
+                	{'form': SubscriptionForm()}
+        	)
 
