@@ -3,3 +3,4 @@ Unipath==1.0
 dj-database-url==0.2.1
 gunicorn==0.17.2
 psycopg2
+south==0.7.6

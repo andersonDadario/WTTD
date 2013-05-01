@@ -27,6 +27,10 @@ class SubscriptionTest(TestCase):
 		'Method __unicode__() is not properly set up'
 		self.assertEqual(u'Henrique Bastos', unicode(self.obj))
 
+	def test_paid_default_value_is_False(self):
+		'By default paid must be False.'
+		self.assertEqual(False, self.obj.paid)
+
 class SubscriptionUniqueTest(TestCase):
 	def setUp(self):
 		# Create a first entry to force collision
